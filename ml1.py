@@ -10,6 +10,7 @@ digits = load_digits()
 
 # print(digits.images[5])
 
+print(digits)
 print(digits.data.shape)
 print(digits.target.shape)
 
@@ -34,10 +35,10 @@ data_train, data_test, target_train, target_test = train_test_split(
     digits.data, digits.target, random_state=11
 )
 
-print(data_train.shape)
-print(target_train.shape)
-print(data_test.shape)
-print(target_test.shape)
+print(data_train)
+print(target_train)
+print(data_test)
+print(target_test)
 
 from sklearn.neighbors import KNeighborsClassifier
 

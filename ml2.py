@@ -3,6 +3,8 @@ import pandas as pd
 nyc = pd.read_csv("ave_hi_nyc_jan_1895-2018.csv")
 
 print(nyc.head(3))
+print(nyc.Date.values)
+print(nyc.Date.values.reshape(-1, 1))
 
 from sklearn.model_selection import train_test_split
 
@@ -10,10 +12,10 @@ X_train, X_test, y_train, y_test = train_test_split(
     nyc.Date.values.reshape(-1, 1), nyc.Temperature.values, random_state=11
 )
 
-# print(X_train.shape)
-# print(X_test.shape)
-# print(y_train.shape)
-# print(y_test.shape)
+print(X_train)
+print(X_test.shape)
+print(y_train.shape)
+print(y_test.shape)
 
 from sklearn.linear_model import LinearRegression
 
